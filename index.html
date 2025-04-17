@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xander Montero | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black">
+
+  <!-- Header -->
+  <header class="bg-black text-white text-center py-8">
+    <img src="476492002_1022171406441842_5922600429418958420_n.jpg" alt="Xander Montero" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-white" />
+    <h1 class="text-3xl font-bold">Xander Montero</h1>
+    <p class="text-lg mt-2">Information Technology 2A</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 text-white flex justify-center space-x-6 py-4">
+    <button onclick="showSection('education')" class="hover:text-gray-400 font-semibold">Education</button>
+    <button onclick="showSection('skills')" class="hover:text-gray-400 font-semibold">Skills</button>
+    <button onclick="showSection('projects')" class="hover:text-gray-400 font-semibold">Projects</button>
+  </nav>
+
+  <!-- Sections -->
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+    
+    <section id="education" class="block">
+      <h2 class="text-2xl font-bold border-b-2 border-gray-400 pb-2 mb-4">Education</h2>
+      <p><strong>BS in Information Technology</strong><br>Ateneo de Davao University</p>
+    </section>
+
+    <section id="skills" class="hidden">
+      <h2 class="text-2xl font-bold border-b-2 border-gray-400 pb-2 mb-4">Skills</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>HTML, CSS, JavaScript</li>
+        <li>React.js, Node.js</li>
+        <li>Python, Java</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="hidden">
+      <h2 class="text-2xl font-bold border-b-2 border-gray-400 pb-2 mb-4">Projects</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Portfolio Website</strong> – A personal website showcasing my skills and work.</li>
+        <li><strong>Task Tracker App</strong> – A to-do list web app with local storage and dark mode.</li>
+        <li><strong>Weather Dashboard</strong> – A real-time weather data web app using a public API.</li>
+      </ul>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4 mt-12">
+    <p>© 2025 Xander Montero. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to toggle sections -->
+  <script>
+    function showSection(id) {
+      const sections = ['education', 'skills', 'projects'];
+      sections.forEach(sec => {
+        document.getElementById(sec).classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
+
